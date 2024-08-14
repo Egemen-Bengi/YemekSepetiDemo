@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainMenu">
+
+    <fragment
+        android:id="@+id/mainMenu"
+        android:name="com.egemenbengi.yemeksepetidemo.view.MainMenu"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu" >
+        <action
+            android:id="@+id/action_mainMenu_to_selectedFoods"
+            app:destination="@id/selectedFoods" />
+        <action
+            android:id="@+id/action_mainMenu_to_newAddress"
+            app:destination="@id/newAddress" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedFoods"
+        android:name="com.egemenbengi.yemeksepetidemo.view.SelectedFoods"
+        android:label="fragment_selected_foods"
+        tools:layout="@layout/fragment_selected_foods" >
+        <argument
+            android:name="FoodCategory"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_selectedFoods_to_sepet"
+            app:destination="@id/sepet" />
+    </fragment>
+    <fragment
+        android:id="@+id/sepet"
+        android:name="com.egemenbengi.yemeksepetidemo.view.Sepet"
+        android:label="fragment_sepet"
+        tools:layout="@layout/fragment_sepet" >
+        <action
+            android:id="@+id/action_sepet_to_addressList"
+            app:destination="@id/addressList" />
+        <action
+            android:id="@+id/action_sepet_to_newAddress"
+            app:destination="@id/newAddress" />
+    </fragment>
+    <fragment
+        android:id="@+id/newAddress"
+        android:name="com.egemenbengi.yemeksepetidemo.view.NewAddress"
+        android:label="fragment_new_address"
+        tools:layout="@layout/fragment_new_address" />
+    <fragment
+        android:id="@+id/addressList"
+        android:name="com.egemenbengi.yemeksepetidemo.view.AddressList"
+        android:label="fragment_address_list"
+        tools:layout="@layout/fragment_address_list" >
+        <action
+            android:id="@+id/action_addressList_to_addressDetail"
+            app:destination="@id/addressDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/addressDetail"
+        android:name="com.egemenbengi.yemeksepetidemo.view.AddressDetail"
+        android:label="fragment_address_detail"
+        tools:layout="@layout/fragment_address_detail" >
+        <argument
+            android:name="Address"
+            app:argType="string" />
+        <argument
+            android:name="Phone"
+            app:argType="string" />
+        <argument
+            android:name="Name"
+            app:argType="string" />
+        <argument
+            android:name="Surname"
+            app:argType="string" />
+    </fragment>
+</navigation>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainMenu">
+
+    <ImageButton
+        android:id="@+id/btnPilavID"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/pilav"
+        app:layout_constraintBottom_toTopOf="@+id/btnCigkofteID"
+        app:layout_constraintStart_toStartOf="@+id/btnCigkofteID"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnCigkofteID"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="48dp"
+        android:src="@drawable/cigkofte"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDonerID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnDonerID" />
+
+    <ImageButton
+        android:id="@+id/btnPizzaID"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="48dp"
+        android:src="@drawable/pizza"
+        app:layout_constraintEnd_toEndOf="@+id/btnDonerID"
+        app:layout_constraintStart_toEndOf="@+id/btnPilavID"
+        app:layout_constraintTop_toTopOf="@+id/btnPilavID" />
+
+    <ImageButton
+        android:id="@+id/btnDonerID"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="38dp"
+        android:src="@drawable/tavukdoner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toEndOf="@+id/btnCigkofteID"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.655" />
+
+    <Button
+        android:id="@+id/btnAddAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Adres ekle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDonerID" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Bengi Yemekleri"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/btnPilavID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
